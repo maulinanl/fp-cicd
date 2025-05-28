@@ -19,15 +19,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: src/js
 
       - name: Run Linter
         run: npm run lint
+        working-directory: src/js
 
       - name: Run Unit Tests
         run: npm test
+        working-directory: src/js
 
       - name: Security Audit
         run: npm audit --audit-level=low || true
+        working-directory: src/js
 
   deploy:
     needs: build-and-test
@@ -41,4 +45,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Ubah jika file HTML-nya di folder lain
+          publish_dir: ./  
