@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-  "lint": "eslint src/js",
-  "test": "jest",
-  "audit": "npm audit"
-},
+    "lint": "eslint .",
+    "test": "jest",
+    "audit": "npm audit"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
