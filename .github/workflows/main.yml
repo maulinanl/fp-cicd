@@ -22,7 +22,7 @@ jobs:
         working-directory: src/js
 
       - name: Run Linter
-        run: npm run lint
+        run: npx eslint .
         working-directory: src/js
 
       - name: Run Unit Tests
